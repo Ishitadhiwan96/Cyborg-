@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>HydroSaathi | Smart Water Bottle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<style>
+
+/* ABOUT SECTION */
+
+.about{
+    background:white;
+    padding:60px 20px;
+    text-align:center;
+}
+
+.about h2{
+    color:#0077b6;
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+/* baaki about aur team wala CSS */
+
+.role{
+    color:#0077b6;
+    font-weight:bold;
+}
+
+/* phir tumhara existing CSS */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.about{
+    background:white;
+    padding:60px 20px;
+    text-align:center;
+}
+
+.about h2{
+    color:#0077b6;
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+.about p{
+    max-width:850px;
+    margin:auto;
+    line-height:1.8;
+    font-size:17px;
+    color:#555;
+}
+
+.team{
+    padding:50px 20px;
+    background:#f8fdff;
+    text-align:center;
+}
+
+.team h2{
+    color:#0077b6;
+    margin-bottom:30px;
+}
+
+.team-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.member{
+    background:white;
+    width:280px;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.member img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.member-content{
+    padding:15px;
+}
+
+.role{
+    color:#0077b6;
+    font-weight:bold;
+}
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#f4fcff;
+    overflow-x:hidden;
+    color:#222;
+}
+.member img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    display:block;
+}
+
+
+/* CUSTOM SCROLLBAR */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#00aaff;
+    border-radius:10px;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    box-shadow:0 2px 15px rgba(0,0,0,0.08);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#0077b6;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#0077b6;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#00aaff;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:120px 8%;
+    gap:60px;
+    flex-wrap:wrap;
+    background:
+    linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),
+    url('background.jpeg');
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-text{
+    max-width:600px;
+}
+
+.hero-text h1{
+    font-size:65px;
+    color:#0077b6;
+    margin-bottom:20px;
+    line-height:1.1;
+}
+
+.hero-text p{
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.4s;
+    font-weight:bold;
+}
+
+.primary{
+    background:#00aaff;
+    color:white;
+}
+
+.primary:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,170,255,0.4);
+}
+
+.secondary{
+    background:white;
+    color:#0077b6;
+}
+
+.secondary:hover{
+    background:#0077b6;
+    color:white;
+}
+
+.hero-image img{
+    width:350px;
+    animation:float 3s ease-in-out infinite;
+    filter:drop-shadow(0 10px 30px rgba(0,0,0,0.2));
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-20px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* STATS */
+
+.stats{
+    padding:80px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+}
+
+.stat-box{
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.stat-box:hover{
+    transform:translateY(-10px);
+}
+
+.stat-box h2{
+    font-size:45px;
+    color:#00aaff;
+}
+
+.stat-box p{
+    margin-top:10px;
+    color:gray;
+}
+
+/* FEATURES */
+
+.features{
+    padding:100px 8%;
+    background:white;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:50px;
+    color:#0077b6;
+}
+
+.feature-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+}
+
+.feature-card{
+    background:#f4fcff;
+    padding:35px;
+    border-radius:25px;
+    transition:0.4s;
+    position:relative;
+    overflow:hidden;
+}
+
+.feature-card::before{
+    content:'';
+    position:absolute;
+    width:120%;
+    height:100%;
+    background:linear-gradient(to right,transparent,#d9f5ff,transparent);
+    top:0;
+    left:-120%;
+    transition:0.8s;
+}
+
+.feature-card:hover::before{
+    left:100%;
+}
+
+.feature-card:hover{
+    transform:translateY(-10px);
+}
+
+.feature-card h3{
+    margin:20px 0;
+    color:#0077b6;
+}
+
+.feature-icon{
+    font-size:55px;
+}
+
+/* GALLERY */
+
+.gallery{
+    padding:100px 8%;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:25px;
+    transition:0.4s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.05);
+}
+
+/* PRICE SECTION */
+
+.pricing{
+    padding:100px 8%;
+    background:linear-gradient(to right,#00aaff,#0077b6);
+    color:white;
+    text-align:center;
+}
+
+.price-card{
+    background:white;
+    color:#222;
+    max-width:450px;
+    margin:auto;
+    padding:50px;
+    border-radius:30px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.2);
+}
+
+.price-card h3{
+    font-size:35px;
+    color:#0077b6;
+}
+
+.price{
+    font-size:60px;
+    margin:25px 0;
+    color:#00aaff;
+}
+
+.old{
+    text-decoration:line-through;
+    color:red;
+    font-size:25px;
+}
+
+#stock{
+    margin:20px 0;
+    font-weight:bold;
+    color:#0077b6;
+}
+
+/* TESTIMONIALS */
+
+.testimonials{
+    padding:100px 8%;
+    background:#f4fcff;
+}
+
+.review-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.review-card{
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.review-card:hover{
+    transform:translateY(-10px);
+}
+
+.stars{
+    color:gold;
+    font-size:22px;
+    margin:10px 0;
+}
+
+/* NEWSLETTER */
+
+.newsletter{
+    padding:100px 8%;
+    text-align:center;
+}
+
+.newsletter-box{
+    background:white;
+    padding:60px;
+    border-radius:30px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.newsletter input{
+    width:60%;
+    padding:15px;
+    border-radius:50px;
+    border:1px solid #ccc;
+    margin-top:20px;
+    outline:none;
+}
+
+.newsletter button{
+    margin-top:20px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0077b6;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .hero-text h1{
+        font-size:45px;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .newsletter input{
+        width:100%;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+    <div class="logo">HydroSaathi 💧</div>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#pricing">Buy</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h1>Smart Hydration <br> Starts Here</h1>
+
+        <p>
+            HydroSaathi is an AI-powered smart bottle that tracks your hydration,
+            shows water temperature, and reminds you to drink water regularly.
+        </p>
+
+        <div class="hero-buttons">
+            <button class="btn primary">Buy Now</button>
+            <button class="btn secondary">Explore</button>
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+        <img src="bottle.jpeg">
+    </div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="stats">
+
+    <div class="stat-box">
+        <h2 id="users">0</h2>
+        <p>Happy Users</p>
+    </div>
+
+    <div class="stat-box">
+        <h2 id="sales">0</h2>
+        <p>Bottles Sold</p>
+    </div>
+
+    <div class="stat-box">
+        <h2 id="countries">0</h2>
+        <p>Countries Reached</p>
+    </div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="features" id="features">
+
+    <div class="section-title">
+        <h2>Premium Features</h2>
+    </div>
+
+    <div class="feature-container">
+
+        <div class="feature-card">
+            <div class="feature-icon">🌡</div>
+            <h3>Smart Temperature Sensor</h3>
+            <p>
+                Real-time temperature display with precision monitoring.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">⏰</div>
+            <h3>Hydration Reminder</h3>
+            <p>
+                Smart reminder system keeps your body hydrated all day.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🔋</div>
+            <h3>Long Battery Life</h3>
+            <p>
+                Lasts for weeks on a single charge.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">💎</div>
+            <h3>Luxury Design</h3>
+            <p>
+                Stylish premium aesthetic made for modern lifestyle.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="gallery" id="gallery">
+
+    <div class="section-title">
+        <h2>Product Gallery</h2>
+    </div>
+
+    <div class="gallery-grid">
+
+        <img src="https://h2oglobalnews.com/wp-content/uploads/2023/08/water-types-1170x836.webp">
+
+        <img src="https://www.health.com/thmb/BRF34fCQ4MMSzm2HjtEEuP4WPGA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Health-GettyImages-1351868843-4dc223f8ccfb42bda0783c601c7e0a01.jpg">
+
+        <img src="https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?auto=format&fit=crop&w=700&q=80">
+
+        <img src="https://www.careinsurance.com/upload_master/media/posts/June2022/how-much-water-do-you-need-when-you-hit-the-gym.jpg">
+        <img src="https://dentistry.uic.edu/wp-content/uploads/sites/741/2020/10/drinking-water-filter-singapore-1235578_1280-1090x595.jpg">
+        <img src="https://www.dabur.com/Blogs/Doshas/Importance%20and%20Benefits%20of%20Yoga%201020x450.jpg">
+    </div>
+
+</section>
+
+<!-- PRICING -->
+
+<section class="pricing" id="pricing">
+
+    <h2 style="font-size:50px;margin-bottom:50px;">
+        Buy HydroSaathi
+    </h2>
+
+    <div class="price-card">
+
+        <h3>Special Launch Offer</h3>
+
+        <div class="price">
+            ₹899
+        </div>
+
+        <div class="old">
+            ₹999
+        </div>
+
+        <p style="margin-top:20px;">
+            🎉 ₹100 OFF for First 100 Customers
+        </p>
+
+        <p id="stock">
+            Only 100 Coupons Left
+        </p>
+
+        <button class="btn primary" onclick="buyNow()">
+            Order Now
+        </button>
+
+    </div>
+
+</section>
+
+<!-- REVIEWS -->
+
+<section class="testimonials" id="reviews">
+
+    <div class="section-title">
+        <h2>Customer Reviews</h2>
+    </div>
+
+    <div class="review-container">
+
+        <div class="review-card">
+            <h3>Riya Sharma</h3>
+            <div class="stars">★★★★★</div>
+
+            <p>
+                Amazing smart bottle. The reminder feature really helped me.
+            </p>
+        </div>
+
+        <div class="review-card">
+            <h3>Aman Verma</h3>
+            <div class="stars">★★★★☆</div>
+
+            <p>
+                Premium build quality and beautiful display.
+            </p>
+        </div>
+
+        <div class="review-card">
+            <h3>Sneha Patel</h3>
+            <div class="stars">★★★★★</div>
+
+            <p>
+                Best water bottle for gym and office lifestyle.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter">
+
+    <div class="newsletter-box">
+
+        <h2 style="font-size:40px;color:#0077b6;">
+            Subscribe for Updates
+        </h2>
+
+        <p style="margin-top:15px;">
+            Get exclusive offers and latest updates from HydroSaathi.
+        </p>
+
+        <input type="email" placeholder="Enter your email">
+
+        <br>
+
+        <button class="btn primary">
+            Subscribe
+        </button>
+
+    </div>
+
+</section>
+<section class="about" id="about">
+
+    <h2>About HydroSaathi 💧</h2>
+
+    <p>
+        HydroSaathi is more than just a water bottle — it's your
+        smart hydration companion. Designed for students, fitness
+        enthusiasts, professionals and travelers, HydroSaathi helps
+        you stay hydrated through intelligent reminders and
+        real-time temperature monitoring.
+        <br><br>
+        Our mission is to promote healthier lifestyles by making
+        hydration simple, smart and effective.
+    </p>
+
+</section>
+<section class="team">
+
+<h2>Meet Our Team</h2>
+
+<div class="team-container">
+
+<div class="member">
+<img src="photo2.jpeg">
+
+<div class="member-content">
+<h3>Ishita dhiwan</h3>
+<p class="role">Developer</p>
+<p>
+Created HydroSaathi with a vision to make hydration smarter and healthier.I am responsible for building and maintaining the technical side of the project.
+I turns ideas into functional and user-friendly designs through code and my focus is on performance, structure, and smooth user experience.
+</p>
+</div>
+
+</div>
+.
+<div class="member">
+<img src="photokritika2.jpeg">
+<div class="member-content">
+<h3>Technical Lead</h3>
+<p class="role">Founder</p>
+<p>
+I am the visionary behind the project and leads the overall direction.
+I have managed the planning dicision making and product growth and believes in turning ideas into impactful real-world solutions.
+My leadership ensures the team stays focused and motivated.
+
+</p>
+</div>
+
+</div>
+
+<div class="member">
+<img src="photoekanshi2.jpeg">
+<div class="member-content">
+<h3>Marketing Head</h3>
+<p class="role">Marketing</p>
+<p>
+I have handled the branding, promotion, and audience engagement and created the  strategies to increase reach and visibility.
+I works on social media presence and audience connection. My efforts help the project reach the right users effectively and ensures the brand stays active, creative, and recognizable.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>HydroSaathi 💧</h2>
+
+    <p style="margin-top:10px;">
+        Smart Living Starts with Hydration
+    </p>
+
+    <p style="margin-top:15px;">
+        © 2026 HydroSaathi | All Rights Reserved
+    </p>
+
+</footer>
+
+<script>
+
+/* DISCOUNT */
+
+let discountLeft = 100;
+
+function buyNow(){
+
+    if(discountLeft > 0){
+
+        discountLeft--;
+
+        document.getElementById("stock").innerHTML =
+        "Only " + discountLeft + " Coupons Left";
+
+        alert("🎉 Congratulations! ₹100 Discount Applied.");
+
+    }
+
+    else{
+
+        alert("❌ Discount Offer Ended");
+
+    }
+
+}
+
+/* COUNTER ANIMATION */
+
+let users = 0;
+let sales = 0;
+let countries = 0;
+
+let counter = setInterval(()=>{
+
+    if(users < 5000){
+        users += 50;
+        document.getElementById("users").innerHTML = users + "+";
+    }
+
+    if(sales < 1200){
+        sales += 10;
+        document.getElementById("sales").innerHTML = sales + "+";
+    }
+
+    if(countries < 25){
+        countries++;
+        document.getElementById("countries").innerHTML = countries + "+";
+    }
+
+},50);
+
+</script>
+
+</body>
+</html>
